@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      namespace: default
+      labels:
+        component: web
+    spec:
+      containers:
+        - name: client
+          image: kswest.azurecr.io/ksavon/multi-client:v2
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: acr-secret
