@@ -12,6 +12,6 @@ docker push kswest.azurecr.io/ksavon/multi-worker:$SHA
 
 kubectl apply -f k8s
 
-kubectl set image deployemnts/server-deployment server=kswest.azurecr.io/ksavon/multi-server:$SHA
-kubectl set image deployemnts/client-deployment client=kswest.azurecr.io/ksavon/multi-client:$SHA
-kubectl set image deployemnts/worker-deployment worker=kswest.azurecr.io/ksavon/multi-worker:$SHA
+kubectl set image deployemnt/server-deployment server=kswest.azurecr.io/ksavon/multi-server:$SHA
+kubectl set image deployemnt/client-deployment client=kswest.azurecr.io/ksavon/multi-client:$SHA
+kubectl set image deployemnt/worker-deployment worker=kswest.azurecr.io/ksavon/multi-worker:$SHA
