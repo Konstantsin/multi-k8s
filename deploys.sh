@@ -1,5 +1,3 @@
-#!/bin/bash
-
 docker build -t kswest.azurecr.io/ksavon/multi-client:latest -t kswest.azurecr.io/ksavon/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t kswest.azurecr.io/ksavon/multi-server:latest -t kswest.azurecr.io/ksavon/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t kswest.azurecr.io/ksavon/multi-worker:latest -t kswest.azurecr.io/ksavon/multi-worker:$SHA -f ./worker/Dockerfile ./worker
